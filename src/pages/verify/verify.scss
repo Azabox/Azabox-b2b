@@ -1,0 +1,80 @@
+@import "../../global.scss";
+
+.verify {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include mobile {
+    flex-direction: column;
+    height: auto;
+  }
+  @include tab {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left {
+    flex: 1;
+    @include mobile {
+      flex: none;
+      height: 50vh;
+    }
+    @include tab {
+      height: 50vh;
+      flex: none;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      @include mobile {
+        object-fit: cover;
+      }
+      @include tab {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .right {
+    flex: 3;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 60px;
+    @include mobile {
+      flex: none;
+      height: 50vh;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $textColor;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #8b8c8c;
+      width: 50%;
+      @include mobile {
+        width: 100%;
+      }
+      @include tab {
+        width: 100%;
+      }
+    }
+
+    .row {
+      display: flex;
+      .col-md-4 {
+        width: 10%;
+        .form-control {
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid gray;
+        }
+      }
+    }
+  }
+}

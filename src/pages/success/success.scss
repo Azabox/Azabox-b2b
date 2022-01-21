@@ -1,0 +1,105 @@
+@import "../../global.scss";
+
+.success {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include mobile {
+    flex-direction: column;
+    height: auto;
+  }
+  @include tab {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    @include mobile {
+      flex: none;
+      height: 50vh;
+    }
+    @include tab {
+      flex: none;
+      height: 50vh;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      @include mobile {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      @include tab {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .right {
+    flex: 3;
+    background-color: $backgroundColor;
+    padding: 50px 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include mobile {
+        width: 100%;
+      }
+      @include tab {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: $textColor;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4f4f4f;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 400px;
+          height: 380px;
+          @include mobile {
+            width: 100%;
+            height: 100%;
+          }
+          @include tab {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .link {
+        background-color: $mainColor;
+        color: white;
+        width: 94%;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 20px;
+        padding: 10px 0;
+      }
+    }
+  }
+}
