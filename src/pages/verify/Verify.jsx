@@ -1,9 +1,19 @@
 import "./verify.scss";
 
 export default function Verify() {
+  const maxLength = 1;
+
   const handleInput = (e) => {
     e.preventDefault();
     window.location.replace("/business");
+  };
+  const handleFocus = (e) => {
+    if (e.key.toLowerCase() === "enter") {
+      const form = e.target.form;
+      const index = [...form].indexOf(e.target);
+      form.elements[index + 1].focus();
+      e.preventDefault();
+    }
   };
   return (
     <div className="verify">
@@ -22,7 +32,9 @@ export default function Verify() {
             <input
               type="tel"
               className="form-control shadow-none"
-              maxLength={1}
+              maxLength={maxLength}
+              autoFocus={true}
+              onKeyDown={handleFocus}
             />
           </div>
           <div className="col-md-4">
@@ -30,6 +42,7 @@ export default function Verify() {
               type="tel"
               className="form-control shadow-none"
               maxLength={1}
+              onKeyDown={handleFocus}
             />
           </div>
           <div className="col-md-4">
@@ -37,6 +50,7 @@ export default function Verify() {
               type="tel"
               className="form-control shadow-none"
               maxLength={1}
+              onKeyDown={handleFocus}
             />
           </div>
           <div className="col-md-4">
@@ -44,6 +58,7 @@ export default function Verify() {
               type="tel"
               className="form-control shadow-none"
               maxLength={1}
+              onKeyDown={handleFocus}
             />
           </div>
           <div className="col-md-4">
@@ -51,6 +66,7 @@ export default function Verify() {
               type="tel"
               className="form-control shadow-none"
               maxLength={1}
+              onKeyDown={handleFocus}
             />
           </div>
           <div className="col-md-4">

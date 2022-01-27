@@ -72,9 +72,6 @@
         cursor: pointer;
         text-decoration: none;
         transition: all 1s ease;
-        &:hover {
-          transform: scale(1.1);
-        }
       }
       .signUp {
         width: 169px;
@@ -89,9 +86,6 @@
         align-items: center;
         cursor: pointer;
         transition: all 1s ease;
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
 
