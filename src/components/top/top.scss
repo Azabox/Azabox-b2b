@@ -1,0 +1,93 @@
+@import "../../global.scss";
+
+.profileTop {
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  @include mobile {
+    flex-direction: column;
+    height: 120px;
+  }
+
+  .topLeft {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    @include mobile {
+      flex: none;
+      padding: 10px;
+    }
+    .row {
+      width: 100%;
+      .col-md-4 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        .form-control {
+          border: none;
+          width: 100%;
+          font-size: 16px;
+          font-weight: 400;
+          color: #4f4f4f;
+          &::placeholder {
+            color: #4f4f4f;
+          }
+        }
+      }
+    }
+  }
+
+  .topRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
+    @include mobile {
+      flex: none;
+      margin-bottom: 15px;
+    }
+    .first {
+      flex: 1;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .switch {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4f4f4f;
+      }
+      i {
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .bi-toggle-on {
+        color: $mainColor;
+      }
+      .bi-toggle-off {
+        color: $backgroundColor;
+      }
+    }
+    .second {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .circle {
+        width: 56px;
+        height: 56px;
+        background-color: #cff6e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: $mainColor;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}

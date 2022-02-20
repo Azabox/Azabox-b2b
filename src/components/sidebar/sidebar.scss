@@ -1,0 +1,72 @@
+@import "../../global.scss";
+
+.sideB {
+  width: 80%;
+  height: 100vh;
+  flex: 1;
+  padding: 40px 0;
+  padding-top: 30px;
+  padding-right: 0;
+  background-color: $sideMainColor;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 0 40px;
+  }
+  .dashboard {
+    padding: 5px 40px;
+    width: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 15px;
+    }
+  }
+  .active {
+    background-color: $mainColor;
+    color: $sideMainColor;
+    width: 100%;
+    padding: 5px 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    .text {
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 15px;
+    }
+  }
+  p {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 40px;
+  }
+  .switch {
+    font-size: 16px;
+    color: $mainColor;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}

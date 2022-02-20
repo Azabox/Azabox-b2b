@@ -1,0 +1,55 @@
+@import "../../global.scss";
+
+.account {
+  background-color: white;
+  width: 60%;
+  height: auto;
+  padding: 20px;
+  @include mobile {
+    width: 100%;
+    position: relative;
+    top: 70px;
+  }
+
+  .accountTxt {
+    font-size: 18px;
+    font-weight: 700;
+    color: #151617;
+    margin-bottom: 5px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    .col-md-4 {
+      width: 100%;
+      height: 50px;
+      .form-label {
+        font-size: 16px;
+        font-weight: 400;
+        color: #151617;
+        margin-bottom: 0;
+        span {
+          font-weight: 700;
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            color: $sideMainColor;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .submit {
+      width: 100%;
+      margin-top: 40px;
+      border: none;
+      height: 30px;
+      border-radius: 4px;
+      background-color: $mainColor;
+      color: white;
+    }
+  }
+}

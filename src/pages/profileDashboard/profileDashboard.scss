@@ -1,0 +1,180 @@
+@import "../../global.scss";
+
+.profileDashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  @include mobile {
+    overflow: hidden;
+    height: 140vh;
+    padding-bottom: 40px;
+  }
+
+  .left {
+    flex: 1;
+    padding: 40px 0;
+    padding-top: 30px;
+    padding-right: 0;
+    background-color: $sideMainColor;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include mobile {
+      display: none;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      cursor: pointer;
+      padding: 0 40px;
+    }
+    .dashboard {
+      padding: 5px 40px;
+      width: 100%;
+      display: flex;
+      color: white;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      .text {
+        font-size: 14px;
+        font-weight: 400;
+        margin-left: 15px;
+      }
+    }
+    .active {
+      background-color: $mainColor;
+      color: $sideMainColor;
+      width: 100%;
+      padding: 5px 40px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      .text {
+        font-size: 14px;
+        font-weight: 700;
+        margin-left: 15px;
+      }
+    }
+    p {
+      color: white;
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 40px;
+    }
+    .switch {
+      font-size: 16px;
+      color: $mainColor;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+  .right {
+    flex: 4;
+    background-color: $backgroundColor;
+
+    .sideIcon {
+      display: none;
+      @include mobile {
+        display: block;
+        position: absolute;
+        right: 0;
+        padding-right: 20px;
+        font-size: 20px;
+      }
+    }
+    .sideMenu {
+      display: none;
+      position: fixed;
+      height: 100vh;
+      width: 90%;
+      z-index: 5;
+      transition: all 1s ease;
+      top: 1200px;
+      @include mobile {
+        display: block;
+      }
+      &.active {
+        top: 0;
+        transition: all 1s ease;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      .name {
+        font-size: 24px;
+        font-weight: 700;
+        color: #151617;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #8b8c8c;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          flex-direction: column;
+        }
+        .leftD {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          @include mobile {
+            flex: none;
+          }
+          .items {
+            display: flex;
+            margin-bottom: 10px;
+            cursor: pointer;
+            .txt {
+              margin-left: 10px;
+              font-size: 14px;
+              font-weight: 400;
+              color: #8b8c8c;
+            }
+            .active {
+              margin-left: 10px;
+              font-weight: 500;
+              color: #151617;
+            }
+          }
+        }
+
+        .rightD {
+          flex: 3;
+          @include mobile {
+            flex: none;
+            height: auto;
+            margin-top: -30px;
+          }
+          .container {
+            display: block;
+            margin: 0;
+            padding: 0;
+          }
+          .inactive {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

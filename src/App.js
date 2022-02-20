@@ -5,6 +5,7 @@ import Business from "./pages/business/Business";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Question from "./pages/question/Question";
 import Success from "./pages/success/Success";
+import ProfileDashboard from "./pages/profileDashboard/ProfileDashboard";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path="/success">
           <Success />
+        </Route>
+        <Route path="/profile-dashboard">
+          <ProfileDashboard />
         </Route>
       </Switch>
     </Router>
