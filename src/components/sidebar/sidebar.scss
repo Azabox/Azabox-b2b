@@ -1,12 +1,10 @@
 @import "../../global.scss";
 
 .sideB {
-  width: 80%;
+  width: 90%;
   height: 100vh;
-  flex: 1;
   padding: 40px 0;
   padding-top: 30px;
-  padding-right: 0;
   background-color: $sideMainColor;
   display: flex;
   flex-direction: column;

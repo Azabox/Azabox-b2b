@@ -1,0 +1,158 @@
+@import "../../global.scss";
+
+.invoice {
+  width: 100%;
+
+  .container {
+    position: relative;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+
+      &.active {
+        opacity: 0.1;
+      }
+
+      .head {
+        display: flex;
+        justify-content: space-between;
+
+        .headLeft {
+          .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #151617;
+          }
+          .cont {
+            font-size: 16px;
+            font-weight: 400;
+            color: #8b8c8c;
+          }
+        }
+        .rightCont {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .options {
+            display: flex;
+            margin-right: 20px;
+            margin-top: 10px;
+            img {
+              width: 24px;
+              height: 24px;
+              margin-right: 10px;
+            }
+            .none {
+              display: none;
+            }
+          }
+          .headRight {
+            background-color: $mainColor;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            width: 165px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 400;
+            transition: all 1s ease;
+            &:disabled {
+              cursor: not-allowed;
+              &:hover {
+                background-color: $mainColor;
+              }
+            }
+
+            &:hover {
+              background-color: $sideMainColor;
+            }
+          }
+        }
+      }
+
+      .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+
+        .img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 70%;
+          }
+        }
+        .create {
+          width: 380px;
+          height: 48px;
+          margin-top: 20px;
+          background-color: $mainColor;
+          color: white;
+          cursor: pointer;
+          border-radius: 4px;
+          border: none;
+          transition: all 1s ease;
+
+          &:disabled {
+            cursor: not-allowed;
+            &:hover {
+              background-color: $mainColor;
+            }
+          }
+
+          &:hover {
+            background-color: $sideMainColor;
+          }
+        }
+      }
+      .none {
+        display: none;
+      }
+
+      .table-responsive {
+        margin-top: 20px;
+        .table {
+          color: $sideMainColor;
+          thead {
+            border-bottom: 1px solid $sideMainColor;
+          }
+          tbody {
+            tr {
+              td {
+                height: 40px;
+                &.due {
+                  width: 41px;
+                  background-color: #97a4aa;
+                  border-radius: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .invoicePopup {
+      width: 100%;
+      height: 400px;
+      position: absolute;
+      top: 100px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}

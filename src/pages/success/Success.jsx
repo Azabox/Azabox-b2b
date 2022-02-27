@@ -19,7 +19,7 @@ export default function Success() {
             />
           </div>
 
-          <Link to="/" className="link">
+          <Link to="/profile-dashboard" className="link">
             Jump into your dashboard
           </Link>
         </div>
